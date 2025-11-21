@@ -1,15 +1,11 @@
 // Creation and configuration of the Express APP
 const express = require("express");
-
+const apiRoutes = require('./routes/api.routes');
 
 const app = express();
 app.use(express.json());
 
-
-// Route configuration
-// Example:
-// const apiRoutes = require('./routes/api.routes');
-// app.use('/api', apiRoutes);
+app.use('/api', apiRoutes);
 
 // 404 handler
 app.use((req, res, next) => {
