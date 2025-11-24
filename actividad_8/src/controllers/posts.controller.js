@@ -1,4 +1,4 @@
-const PostModel = require('../models/post.model');p
+const PostModel = require('../models/posts.model');
 
 const getAllPosts = async (req, res) => {
     const posts = await PostModel.selectPosts();
@@ -9,4 +9,4 @@ const create = async (req, res) => {
     res.json(posts);
 }
 
-module.exports = { getAllPosts,create }
+module.exports = { getAllPosts, create }
