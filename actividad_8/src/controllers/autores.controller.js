@@ -1,10 +1,13 @@
 const autoresModel = require('../models/autores.model');
 
+
 const getAllAuthors = async (req, res) => {
     const autores = await autoresModel.selectAuthors()
     res.json(autores);
 }
-const create = (req, res) => {
+const create = async (req, res) => {
+    const result = await autoresModel.insertAuthor(req.body);
+    return res.json(result);
     // Implement your logic here
 }
 module.exports = { getAllAuthors, create }
