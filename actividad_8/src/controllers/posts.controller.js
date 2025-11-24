@@ -9,4 +9,4 @@ const create = async (req, res) => {
     res.json(posts);
 }
 
-module.exports = { getAllPosts, create }
+module.exports = { getAllPosts,create }
