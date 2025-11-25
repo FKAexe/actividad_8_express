@@ -9,6 +9,5 @@ const getAllAuthors = async (req, res) => {
 const create = async (req, res) => {
     const result = await autoresModel.insertAuthor(req.body);
     res.json(result);
-    // Implement your logic here
 }
 module.exports = { getAllAuthors, create }
