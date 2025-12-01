@@ -1,0 +1,15 @@
+@URL = http://localhost:3000/api
+
+GET {{URL}}/autores
+  Accept: application/json
+
+###
+
+GET {{URL}}/posts 
+  Accept: application/json
+
+###
+
+
+GET {{URL}}/posts/1
+  Accept: application/json
