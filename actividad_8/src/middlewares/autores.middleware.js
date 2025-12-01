@@ -14,4 +14,13 @@ const checkAuthorId = async (req, res, next) => {
     next();
 }
 
-module.exports = { checkAuthorId };
+const checkAuthorExists = async (req, res, next) => {
+    const {author_id} = req.body;
+    const author = await autoresModel.selectById(author_id);
+    if (!author) {
+        return res.status(404).json({ message: 'Autor no encontrado' });
+    }
+    next();
+}
+
+module.exports = { checkAuthorId, checkAuthorExists };

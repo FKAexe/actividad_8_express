@@ -11,5 +11,5 @@ GET {{URL}}/posts
 ###
 
 
-GET {{URL}}/posts/40
+GET {{URL}}/posts/1
   Accept: application/json
